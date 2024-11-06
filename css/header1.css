@@ -1,0 +1,184 @@
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.san1 {
+    background-color: #ffb31f;
+    color: #000;
+    padding: 3px;
+    font-size: 13px;
+}
+
+.san1 p {
+    margin-left: 600px;
+}
+
+section {
+    /* height: 100vh; */
+    background-color: #f8f4ec;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav {
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    display: flex;
+    /* Use flexbox for navigation alignment */
+    justify-content: space-between;
+    /* Distribute items evenly */
+    align-items: center;
+    /* Center items vertically */
+}
+
+.nav-left ul li:hover {
+    border-bottom: 2px solid #FAB302;
+}
+
+.nav-left {
+    
+    width: 40%;
+}
+
+.nav-right {
+    width: 15%;
+}
+
+.nav-left ul,
+.nav-right ul {
+    list-style: none;
+    /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-giua img {
+    margin-left: -20px;
+    width: 41%;
+    height: 20%;
+}
+
+.nav-left ul li,
+.nav-right ul li {
+    display: inline-block;
+    /* Display list items horizontally */
+    color: #fff;
+}
+
+.nav-left ul li {
+    margin-left: 115px;
+    font-size: 13px;
+    margin-right: 10px;
+    /* Add space between items */
+}
+
+.nav-right ul li {
+    margin-left: 10px;
+    /* Add space between items */
+}
+
+.menu {
+    background-color: #000;
+    height: 35px;
+
+}
+
+.menu ul li {
+    font-size: 13px;
+    color: #fff;
+    margin-left: 20px;
+    margin-top: 9px;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.menu ul li:hover {
+    border-bottom: 2px solid #FAB302;
+}
+
+.menu a {
+    width: 30px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+
+
+}
+
+.menu ul li ul {
+    display: none;
+    /* Hide dropdown menu by default */
+    position: absolute;
+    background-color: #000;
+    margin-top: 5px;
+    /* Adjust as needed */
+}
+
+.menu ul li:hover ul {
+    display: block;
+    /* Display dropdown menu on hover */
+}
+
+.menu ul li ul li {
+    margin-left: 50px;
+    display: block;
+}
+
+.menu ul li ul li a {
+    color: #fff;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+.menu ul li ul {
+    display: none;
+    /* Hide dropdown menu by default */
+    position: absolute;
+    background-color: #000;
+    margin-top: 5px;
+    /* Adjust as needed */
+}
+
+.menu ul li:hover ul {
+    display: block;
+    /* Display dropdown menu on hover */
+}
+
+.menu ul li ul li {
+    display: block;
+    width: 100%;
+}
+
+.menu ul li ul li a {
+    width: 200px;
+    color: #fff;
+    display: block;
+    /* padding: 10px; */
+    text-decoration: none;
+}
+
+.success-message {
+    width: 500px;
+    margin-left: 530px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+.error-message {
+    width: 500px;
+    margin-left: 530px;
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
