@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đơn Mua</title>
+    <link rel="stylesheet" href="donmua.css">
+    <link rel="stylesheet" href="header1.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="https://kit.fontawesome.com/1c5c4be935.js" crossorigin="anonymous"></script>
+    <!-- ======================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+<body>
+    <!--         MỞ ĐẦU HEADER         -->
+
+    <!--   ---------------------------------   -->
+    
+    <div class="san1">
+        <p style="margin-left: 660px;font-family: none;">MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC</p>
+    </div>
+    <section>
+        <div class="nav">
+            <div class="nav-left">
+                <ul>
+                    <!-- <li>GLOBAL SHOP</li>
+                    <li>ELDER SHOP</li>
+                    <li>ABOUT US</li> -->
+                    <li style="   margin-left: 115px;"> STORE</li>
+                </ul>
+            </div>
+            <div class="nav-giua ">
+                <img style="  width: 41% ; margin-left: -110px;" src="img/logo chuẩn.png">
+            </div>
+            <div class="nav-right">
+                <div style="color: #fff;
+                            list-style-type: none;
+                            margin-top: -36px;
+                            display: flex;
+                            height: 100px;
+                            width: 100px;">
+                    <li class="icon" style="margin-left: 10px; margin-top: 56px;">
+                        <i style="font-size: 20px;" class="fa-solid fa-search"></i>
+                    </li>
+                    <a href="#">
+                        <li class="icon" style="margin-left: 10px; margin-top: 56px;">
+                            <i style="font-size: 20px; ; margin-left: 10px;" class="fa-solid fa-user"></i>
+                        </li>
+                    </a>
+                    <li class="icon" style="margin-left: 10px; margin-top: 56px;">
+                        <i style="font-size: 20px; margin-left: 10px;" class="fa-solid fa-cart-shopping"></i>
+                    </li>
+                </div>
+            </div>
+            
+            <style>
+                /* Đặt màu trắng và kích thước cơ bản cho các biểu tượng */
+                .icon i {
+                    color: #fff;
+                    transition: color 0.3s ease, transform 0.3s ease;
+                }
+            
+                /* Hiệu ứng hover: thay đổi màu và phóng to */
+                .icon:hover i {
+                    color: #FAB302; /* Đổi màu vàng khi hover */
+                    transform: scale(1.2); /* Phóng to nhẹ */
+                }
+            </style>
+            
+        </div>
+        <hr>
+        <div class="menu" style="text-align:center;">
+            <ul>
+                <li>
+                    <a href="#">SHOP</a>
+
+                    <!-- Add dropdown menu items -->
+
+
+                </li>
+                <li> <a href="#">COLLAB</a></li>
+                <li> <a href="#">CONTACT</a></li>
+                <li> <a href="#">ABOUT US</a></li>
+            </ul>
+        </div>
+        <hr>
+
+    </section>
+
+
+
+
+    <!--        MỞ ĐẦU BODY         -->
+
+    <!--   ---------------------------------   -->
+    <div class="bao">
+        <div class="sidebar">
+            <div class="logo">Tài Khoản Của Tớ</div>
+            <div class="menu-item"><a href="Hoso.html">Hồ Sơ Của Tớ</a></div>
+            <div class="menu-item"><a href="Donmua.html">Đơn Mua</a></div>
+            <div class="menu-item"><a href="#">Thông báo</a></div>
+            <div class="menu-item"><a href="#">Kho Voucher</a></div>
+            <div class="menu-item"><a href="#">TAFs Xu</a></div>
+            <button class="logout-button" onclick="logout()">Đăng xuất</button>
+        </div>
+
+            <div class="content">
+                <h1>Đơn Mua</h1>
+        
+                <div class="navbarr-container" id="navbarrContainer">
+                    <div class="navbarr-item active" onclick="switchPage('all')">Tất cả</div>
+                    <div class="navbarr-item" onclick="switchPage('payment')">Chờ xác nhận</div>
+                    <div class="navbarr-item" onclick="switchPage('shipping')">Chờ lấy hàng</div>
+                    <div class="navbarr-item" onclick="switchPage('waiting')">Chờ giao hàng </div>
+                    <div class="navbarr-item" onclick="switchPage('completed')">Trả Hàng</div>
+                    <div class="navbarr-item" onclick="switchPage('canceled')">Đã giao</div>
+                    <div class="navbarr-item" onclick="switchPage('sale')">Đã hủy</div>
+                </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Bạn có thể tìm kiếm theo mã đơn hàng hoặc Tên Sản Phẩm...">
+                <button>Tìm kiếm</button>
+            </div>
+            
+
+              <!-- Nội dung cho từng trang -->
+        <div class="content-container">
+            <div class="page-content active" id="page-all">
+                <div class="order">
+                    <div class="order-item">
+                        <img src="img/ao.webp" alt="Product Image">
+                        <div class="details">
+                            <p><strong>DC | DBZ Goku & Shenron Shirt - Black</strong></p>
+                            <p>Chất liệu: Polyester &nbsp;&nbsp; Size: M</p>
+                            <p>x2</p>
+                        </div>
+                        <div class="price">1,200,000 đ</div>
+                    </div>
+                    <br> <br>
+                    <div class="order-item">
+                        <img src="img/quan.webp" alt="Product Image">
+                        <div class="details">
+                            <p><strong>DirtyCoins Comfy Essential Jeans - Moss Blue</strong></p>
+                            <p>Chất liệu: Cotton &nbsp;&nbsp; Size: 34</p>
+                            <p>x1</p>
+                        </div>
+                        <div class="price">790,000 đ</div>
+                    </div>
+        
+                    <div class="total">
+                        <span>THÀNH TIỀN:</span>
+                        <span>1,990,000 đ</span>
+                    </div>
+        
+                    <div class="order-footer" >
+                     <a style="text-decoration: none; color: #fff;" href="#">Quay lại cửa hàng</a> 
+                        <button><a style="text-decoration: none; color: #000;" href="#thanhtoan">MUA LẠI</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content" id="page-payment">Trang Chờ xác nhận</div>
+            <div class="page-content" id="page-shipping">Trang Lấy Hàng</div>
+            <div class="page-content" id="page-waiting">Trang Chờ giao hàng</div>
+            <div class="page-content" id="page-completed">Trang Trả hàng</div>
+            <div class="page-content" id="page-canceled">Trang Đã giao</div>
+            <div class="page-content" id="page-sale">Trang Đã hủy</div>
+        </div>
+
+            
+        </div>
+    </div>
+
+    <!--          KẾT THÚC PHẦN BODY         -->
+
+    <!--   ---------------------------------   -->
+
+
+
+
+    <!--          MỞ ĐẦU PHẦN FOOTER        -->
+
+    <!--   ---------------------------------   -->
+
+    <div class="footer">
+        <div class="footer1">    
+        <h4 style="color:red; "> Giảm giá 500k cho đơn hàng đầu tiên</h4>
+        <h1 style=" color: white;">Đăng ký email ngay</h1>
+        <p>Phiếu giảm giá sẽ được gửi vào email của bạn trị giá<br>
+            500,000₫ khi đơn hàng đầu tên trên 5,000,000₫</p>
+    
+            <form action="save_email.php" method="POST">
+                <input type="email" id="email" name="email" required placeholder="example@gmail.com" style="padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid 000; width: 100%; max-width: 300px;">
+                <button type="submit" style="padding: 10px 20px; background-color:#FAB302; color: white; border: none; border-radius: 5px; font-size: 15px;">
+                    Đăng ký
+                </button>
+            </form>
+            <br>    
+            <img src="img/visa thanh tian.jpg" alt="">
+           
+    </div>
+    <hr>
+    <div class="footer3">
+        <div class="contact">
+            <span>Bạn cần hỗ trợ</span>
+            <div class="phone">
+                <i class="fas fa-phone-alt"></i> <!-- Font Awesome icon for the phone -->
+                <span>(+84) 0355179373</span>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="img/logo chuẩn.png" alt="TAFS Fashion Style"> <!-- Replace with your logo image -->
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    
+    <div class="footer2">
+        <div class="column">
+            <h3>KẾT NỐI VỚI CHÚNG TÔI</h3> 
+            <br>
+           <p>TAFS là brand phụ kiện thành lập bởi những người có niềm đam mê với 
+            trang sức, yêu thích các chế tác được tạo ra từ đôi bàn tay thuần Việt, 
+            mong muốn đưa các tác phẩm vươn tầm thế giới.</p>
+            <br>
+            <h4>Hotline hỗ trợ:</h4>
+            <li>- Hà Nội: 039.327.8668</li>
+            <li>- Hồ Chí Minh: 0794.302.899</li> 
+            <li>Phản Ánh Chất Lượng Dịch Vụ : 0981.956.116</li>
+            <li>Email: support@vansang</li>
+        </div>
+        
+    <div class="column">
+        <h3>CHĂM SÓC KHÁCH HÀNG</h3> 
+        <br>
+        <li>Hướng dẫn thanh toán</li>
+        <li>Giao Hàng</li> 
+        <li>Chính sách bảo hành</li>
+        <li>Chính sách đổi trả</li> 
+        <li>Chính sách bảo mật</li>  
+        <li>Bảng giá phí điều chỉnh sản phẩm</li>  
+    </div>
+    
+    <div class="column">
+        <h3>VỀ CHÚNG TÔI</h3>
+        <br>
+        <li> TAFS</li>
+        <li> Hệ thống</li> 
+        <li> Tuyển dụng</li>
+        <li>Menbership by TAFs</li>  
+    </div>
+    <div class="column">
+        <h3>DÀNH CHO KHÁCH HÀNG</h3>
+        <br>
+        <li> Kiện thức thời trang</li>
+        <li> Hướng dẫn bảo quản</li> 
+        <li> Hướng dẫn đo size</li> 
+    </div>
+    </div>
+    </div>
+    
+
+<!--          KẾT THÚC PHẦN FOOTER       -->
+
+    <!--   ---------------------------------   -->
+
+
+    <!-- ======================================= -->
+
+    <!-- ======================================= -->
+
+
+
+
+    <!--          JS          -->
+
+    <!--   ---------------------------------   -->
+    <script>
+        const navbarItems = document.querySelectorAll('.navbarr-item');
+        const pages = document.querySelectorAll('.page-content');
+
+        function switchPage(pageId) {
+            // Xóa lớp `active` khỏi tất cả mục menu và trang nội dung
+            navbarItems.forEach(item => item.classList.remove('active'));
+            pages.forEach(page => page.classList.remove('active'));
+
+            // Thêm lớp `active` vào mục menu đã chọn
+            const selectedItem = document.querySelector(`.navbarr-item[onclick="switchPage('${pageId}')"]`);
+            selectedItem.classList.add('active');
+
+            // Hiển thị trang nội dung tương ứng
+            const selectedPage = document.getElementById(`page-${pageId}`);
+            selectedPage.classList.add('active');
+        }
+
+        // Tạo hiệu ứng kéo cho thanh menu
+        const navbarContainer = document.getElementById('navbarrContainer');
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
+
+        navbarContainer.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            navbarContainer.classList.add('grabbing');
+            startX = e.pageX - navbarContainer.offsetLeft;
+            scrollLeft = navbarContainer.scrollLeft;
+        });
+
+        navbarContainer.addEventListener('mouseleave', () => {
+            isDragging = false;
+            navbarContainer.classList.remove('grabbing');
+        });
+
+        navbarContainer.addEventListener('mouseup', () => {                                                                                     
+            isDragging = false;
+            navbarContainer.classList.remove('grabbing');
+        });
+
+        navbarContainer.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - navbarContainer.offsetLeft;
+            const walk = (x - startX) * 2;
+            navbarContainer.scrollLeft = scrollLeft - walk;
+        });
+
+        function logout() {
+        // Hiển thị thông báo xác nhận
+        if (confirm('Bạn có chắc chắn muốn đăng xuất?')) {
+            // Xử lý đăng xuất ở đây (như xóa sessionStorage hoặc redirect)
+            alert('Bạn đã đăng xuất thành công!');
+            
+            // Redirect to the login page (update the URL as necessary)
+            window.location.href = 'login.html'; // Thay đổi 'login.html' thành trang đăng nhập thực tế của bạn
+        }
+    }
+    </script>
+</body>
+</html>
